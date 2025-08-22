@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Login</title>
+   
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <div class="container">
+      <div class="login-container">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Please enter your details to sign in</p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" />
+            <span class="error-message" id="username-error"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Enter your password" />
+              <button type="button" id="togglePassword" class="toggle-password">
+                <span class="eye-icon"></span>
+              </button>
+            </div>
+            <span class="error-message" id="password-error"></span>
+          </div>
+
+          <div class="options">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Remember for 30 days</label>
+            </div>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <a href="../pages/home2.html" class="login-button">Sign in</a>
+
+
+          <div class="sign-up">
+            <span>Don't have an account?</span>
+            <a href="../pages/home2.html" class="sign-up-link">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="../js/login.js"></script>
+  </body>
+</html>
