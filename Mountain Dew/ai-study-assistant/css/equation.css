@@ -1,0 +1,171 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  background: rgba(20, 20, 20, 0.95);
+  max-width: 900px; /* Increased width */
+  width: 100%;
+  padding: 28px 32px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 18px #ff00ff inset;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 18px #00ffff;
+  font-size: 2em;
+  animation: fadeIn 1s;
+}
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00ffff;
+  letter-spacing: 0.5px;
+}
+textarea, input[type="text"] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #00ffff;
+  resize: vertical;
+  background: #222;
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+textarea:focus, input[type="text"]:focus {
+  outline: none;
+  border-color: #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+}
+.checkbox-group {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+button {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 14px 0;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.13rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-shadow: 0 0 10px #000;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+button:hover {
+  background: #009acd;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #ff00ff;
+}
+.result {
+  margin-top: 24px;
+  background: linear-gradient(120deg, rgba(0,255,255,0.13) 0%, rgba(255,0,255,0.10) 100%);
+  border-left: 6px solid #00ffff;
+  border-right: 6px solid #ff00ff;
+  border-radius: 14px;
+  padding: 22px 18px;
+  box-shadow: 0 0 18px #00ffff, 0 0 8px #ff00ff inset;
+  font-family: 'Poppins', 'Courier New', Courier, monospace;
+  font-size: 1.13em;
+  color: #fff;
+  min-height: 80px;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  position: relative;
+  overflow-x: auto;
+  animation: fadeIn 1s;
+}
+.result::before {
+  content: "🧮 Solution";
+  position: absolute;
+  top: -18px;
+  left: 18px;
+  background: linear-gradient(90deg, #00ffff 60%, #ff00ff 100%);
+  color: #222;
+  font-size: 0.95em;
+  font-weight: bold;
+  padding: 2px 14px;
+  border-radius: 8px 8px 0 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.2);
+}
+
+.loading {
+  text-align: center;
+  font-weight: 700;
+  color: #00ffff;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    padding: 16px 8px;
+    width: 98%;
+  }
+  h1 {
+    font-size: 1.7em;
+  }
+  .result {
+    padding: 14px 8px;
+    font-size: 1em;
+  }
+  .result::before {
+    left: 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 8px 2px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  textarea, input[type="text"], button {
+    font-size: 0.97em;
+    padding: 10px;
+  }
+  .result {
+    padding: 8px 2px;
+    font-size: 0.97em;
+    border-radius: 8px;
+  }
+  .result::before {
+    left: 6px;
+    font-size: 0.85em;
+    padding: 1px 8px;
+  }
+}

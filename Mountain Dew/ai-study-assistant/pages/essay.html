@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Essay & Letter Generator</title>
+  <link rel="stylesheet" href="../css/essay.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>📝 AI Essay & Letter Generator</h1>
+
+    <label for="topic">Enter Topic:</label>
+    <input type="text" id="topic" placeholder="e.g. Importance of Education" />
+
+    <label for="wordCount">Select Word Count:</label>
+    <select id="wordCount">
+      <option value="100">100 words</option>
+      <option value="200">200 words</option>
+      <option value="300">300 words</option>
+      <option value="500">500 words</option>
+    </select>
+
+    <label for="type">Select Type:</label>
+    <select id="type">
+      <option value="essay">Essay</option>
+      <option value="letter">Letter</option>
+      <option value="application">Application</option>
+      <option value="report">Report</option>
+    </select>
+
+    <button onclick="generateContent()">Generate</button>
+
+    <div id="loading" class="loading" style="display: none;">Generating, please wait...</div>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="../js/essay.js"></script>
+</body>
+</html>
